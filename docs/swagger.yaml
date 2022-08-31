@@ -1,0 +1,111 @@
+basePath: /v1
+definitions:
+  entity.Company:
+    properties:
+      company_type:
+        type: integer
+      created_at:
+        type: string
+      destroyed_at:
+        type: string
+      details:
+        $ref: '#/definitions/entity.CompanyDetails'
+      full_name:
+        type: string
+      id:
+        type: integer
+      logo:
+        type: string
+      name:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: integer
+    type: object
+  entity.CompanyDetails:
+    properties:
+      address:
+        type: string
+      inn:
+        type: string
+      kpp:
+        type: string
+      ogrn:
+        type: string
+    type: object
+  entity.Product:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      destroyed_at:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      price:
+        type: number
+      product_type:
+        type: integer
+      sku:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  v1.listCompanyResponse:
+    properties:
+      companies:
+        items:
+          $ref: '#/definitions/entity.Company'
+        type: array
+    type: object
+  v1.listProductResponse:
+    properties:
+      products:
+        items:
+          $ref: '#/definitions/entity.Product'
+        type: array
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: Using an api service as an example
+  title: Clean API
+  version: "1.0"
+paths:
+  /companies:
+    get:
+      consumes:
+      - application/json
+      description: Show all company list
+      operationId: companyList
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/v1.listCompanyResponse'
+      summary: Show company list
+      tags:
+      - companies
+  /products:
+    get:
+      consumes:
+      - application/json
+      description: Show all product list
+      operationId: productList
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/v1.listProductResponse'
+      summary: Show product list
+      tags:
+      - products
+swagger: "2.0"

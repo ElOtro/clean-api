@@ -1,0 +1,14 @@
+app:
+  name: 'clean-api'
+  version: '1.0.0'
+
+http:
+  port: '8080'
+
+logger:
+  log_level: 'debug'
+  rollbar_env: 'clean-api'
+
+postgres:
+  pool_max: 2
+  pg_url: 'postgres://elotro@localhost/stockup_dev'
