@@ -20,8 +20,6 @@ definitions:
         type: string
       updated_at:
         type: string
-      user_id:
-        type: integer
     type: object
   entity.CompanyDetails:
     properties:
