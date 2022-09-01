@@ -11,6 +11,8 @@ https://youtu.be/V6lQG6d5LgU
 - create PostgreSQL database "stockup_tes"
 - run "make migrate"
 
+Gin was replaced with Chi
+
 ## TODO
 
 - Dockerize
