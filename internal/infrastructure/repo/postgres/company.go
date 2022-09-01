@@ -21,7 +21,7 @@ func NewCompanyRepo(pg *postgres.Postgres) *CompanyRepo {
 // GetHistory -.
 func (m CompanyRepo) GetAll() ([]*entity.Company, error) {
 	// Construct the SQL query to retrieve all records.
-	query := `SELECT id, logo, name, full_name, company_type, details, user_id, created_at, updated_at
+	query := `SELECT id, logo, name, full_name, company_type, details, created_at, updated_at
 		      FROM companies`
 
 	// Create a context with a 3-second timeout.
@@ -55,7 +55,6 @@ func (m CompanyRepo) GetAll() ([]*entity.Company, error) {
 			&company.FullName,
 			&company.CompanyType,
 			&company.Details,
-			&company.UserID,
 			&company.CreatedAt,
 			&company.UpdatedAt,
 		)

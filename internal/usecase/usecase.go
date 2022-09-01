@@ -10,7 +10,7 @@ type UseCases struct {
 
 // For ease of use, we also add a NewUseCases() method which returns a UseCases struct containing
 // the initialized UseCases.
-func NewUseCases(models *repo.Models) UseCases {
+func NewUseCases(models *repo.Repo) UseCases {
 	return UseCases{
 		Company: *NewCompanyUseCase(&models.Companies),
 		Product: *NewProductUserCase(&models.Products),

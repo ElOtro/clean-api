@@ -28,7 +28,7 @@ func Run(cfg *config.Config) {
 	defer pg.Close()
 
 	// pg models
-	pgModels := repo.NewModels(pg)
+	pgModels := repo.NewRepo(pg)
 
 	// use cases
 	useCases := usecase.NewUseCases(&pgModels)

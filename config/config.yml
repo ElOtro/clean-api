@@ -11,4 +11,4 @@ logger:
 
 postgres:
   pool_max: 2
-  pg_url: 'postgres://elotro@localhost/stockup_dev'
+  pg_url: 'postgres://elotro@localhost/stockup_test'

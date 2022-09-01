@@ -18,7 +18,6 @@ type Company struct {
 	FullName    string          `json:"full_name,omitempty"`
 	CompanyType int             `json:"company_type,omitempty"`
 	Details     *CompanyDetails `json:"details,omitempty"`
-	UserID      *int64          `json:"user_id,omitempty"`
 	DestroyedAt *time.Time      `json:"destroyed_at,omitempty"`
 	CreatedAt   *time.Time      `json:"created_at,omitempty"`
 	UpdatedAt   *time.Time      `json:"updated_at,omitempty"`
