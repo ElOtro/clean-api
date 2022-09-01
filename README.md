@@ -15,6 +15,8 @@ https://youtu.be/V6lQG6d5LgU
 - create PostgreSQL database "stockup_test"
 - run "make migrate"
 
+Swagger doc: http://localhost:8080/swagger/index.html
+
 ## TODO
 
 - Dockerize
