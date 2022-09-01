@@ -1,5 +1,7 @@
 # clean-api
 
+Gin was replaced with Chi
+
 ## Based on 
 
 https://github.com/evrone/go-clean-template
@@ -12,8 +14,6 @@ https://youtu.be/V6lQG6d5LgU
 
 - create PostgreSQL database "stockup_test"
 - run "make migrate"
-
-Gin was replaced with Chi
 
 ## TODO
 
