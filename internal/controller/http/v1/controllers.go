@@ -8,8 +8,7 @@ type Controllers struct {
 	Product ProductController
 }
 
-// For ease of use, we also add a New() method which returns a Models struct containing
-// the initialized InvoiceModel.
+// For ease of use, we also add a NewControllers() method which returns a Controllers struct
 func NewControllers(usecases *usecase.UseCases) Controllers {
 	return Controllers{
 		Company: *NewCompanyController(&usecases.Company),

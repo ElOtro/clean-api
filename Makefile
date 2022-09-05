@@ -11,11 +11,11 @@ run:
 migrate:
 	go run -tags migrate ./cmd/app
 
-## run: run the cmd/app application
+## doc: output swagger files
 doc:
 	swag init -g ./internal/controller/http/v1/router.go
 
 ## build: build the cmd/app application
 build:
-	@echo 'Building cmd/api...'
-	go build -ldflags='-s' -o=./bin/api ./cmd/api
+	@echo 'Building cmd/app...'
+	go build -ldflags='-s' -o=./bin/app ./cmd/app
